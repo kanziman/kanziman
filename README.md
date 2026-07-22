@@ -1,6 +1,4 @@
-# 안녕하세요, 황경태입니다.
-
-**AI Product Engineer & Generalist**
+# 황경태 | AI Product Engineer
 
 호기심과 집요함을 바탕으로 백엔드 파이프라인부터 디자인 시스템까지 일관되게 관통시키며, 사용자의 온전한 AI 경험(AX)을 설계하고 구현하는 메이커입니다.
 
