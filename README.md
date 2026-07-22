@@ -14,7 +14,7 @@
 
 ---
 
-## Selected Projects
+## Side Projects
 
 ### [skillx-map](https://github.com/kanziman/skillx-map) (2026)
 * **System Utility** | [GitHub](https://github.com/kanziman/skillx-map) · [npm](https://www.npmjs.com/package/skillx-map)
