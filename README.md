@@ -1,39 +1,47 @@
-# 황경태 | AI Product Engineer
+# 황경태 | Backend Engineer
 
-호기심과 집요함을 바탕으로 백엔드 파이프라인부터 디자인 시스템까지 일관되게 관통시키며, 사용자의 온전한 AI 경험(AX)을 설계하고 구현하는 메이커입니다.
+글로벌 5개 리전 콘텐츠 플랫폼과 1일 100만 건 금융 데이터 인프라를 개발·운영해 온 백엔드 엔지니어입니다.
+
+AI 시대에 개인이 어떤 역량을 쌓아야 하는지가 요즘 가장 큰 관심사입니다. AI를 충분히 쓰면 한 사람이 할 수 있는 일의 범위가 넓어진다고 보고, 그 힘을 백엔드 경험을 바탕으로 제품 전체를 보는 시야를 키우는 데 쓰고 싶습니다. 그래서 업무 밖에서도 도메인이 다른 프로젝트를 하나씩 만들고 있고, 최근에는 콘텐츠 제작과 이커머스 쪽 자동화도 해 보고 있습니다.
+
+[Portfolio](https://brand-design-one.vercel.app/portfolio.html) · [Resume](https://brand-design-one.vercel.app/resume.html) · [Email](mailto:hwanghkt@naver.com)
 
 ---
 
 ## Side Projects
 
-### [skillx-map](https://github.com/kanziman/skillx-map) (2026)
-* **System Utility** | [GitHub](https://github.com/kanziman/skillx-map) · [npm](https://www.npmjs.com/package/skillx-map)
-* 프로젝트 디렉토리마다 무분별하게 쌓이는 AI 스킬들의 오작동과 충돌을 제어하기 위한 CLI 유틸리티입니다. 로컬 파일 시스템을 검사하여 자산 충돌을 막고 깔끔한 AI 협업 환경을 유지해 줍니다.
-* **Spec**: Zero-dependency CLI, Grouped Tree UI, Outfit Font (UI) + System Monospace
+### [NexusWiki](https://github.com/kanziman/NexusWiki) (2026.08 - 진행 중)
+* **팀 지식 위키 (사내 플랫폼 도입)** | [GitHub](https://github.com/kanziman/NexusWiki) · [서비스](https://www.nexuswiki.net/)
+* 회사 사양서 기반 챗봇을 만든 경험에서 출발해, 팀원끼리 지식을 위키로 공유하려고 제안하고 만든 서비스입니다. LLM이 원문을 상호 링크된 위키로 정리하고, 답변마다 원문과 위키 양쪽 출처를 인용합니다.
+* 4채널 하이브리드 검색으로 원문과 위키를 함께 인용하고, 채널별 순위와 RRF 기여도를 비교하는 개발용 디버그 뷰어로 검색 단계 문제를 분리해 진단합니다.
+* 팀별 데이터 격리는 애플리케이션이 아닌 Postgres RLS로 강제하고, 임베딩 호출은 worker 전용 키와 사설망으로 경계를 나눴습니다.
 
-### [zettlink](https://github.com/kanziman/zettlink) (2026)
-* **Full-Stack System** | [GitHub](https://github.com/kanziman/zettlink) · [Live Site](https://zettlink-site.vercel.app/)
-* 일상 속에서 텔레그램으로 URL만 전송하면 자동으로 정보를 추출하고 LLM 가공을 거쳐, TIL이나 심층 분석 등 목적에 맞는 정적 페이지로 즉시 발행하는 지식 아카이빙 파이프라인입니다.
-* **Spec**: Telegram Bot Queue, Supabase Admin Dashboard, Next.js SSG
+### [channel-voc-demo](https://github.com/kanziman/channel-voc-demo) (2026)
+* **에이전트 · GraphRAG** | [GitHub](https://github.com/kanziman/channel-voc-demo) · [Live Demo](https://channel-voc-demo.vercel.app/)
+* 고객 상담(VOC) 대화에서 반복되는 문제의 루트원인과 예상 매출 손실액을 찾아, 사람이 승인하면 GitHub 이슈와 Jira 티켓으로 연결하는 에이전트입니다. (공개 CS 데이터셋 1,200건 기반)
+* 의미 검색, 키워드 검색, 그래프 검색을 RRF로 결합한 3중 하이브리드 GraphRAG와 LangGraph 사람 승인 게이트를 구현했고, Vercel 번들 용량 한도를 넘는 문제를 의존성 정리와 외부 임베딩으로 풀어 서버리스로 배포했습니다.
+
+### [입틀막 - 항공 특가 검증 피드](https://deals.nexuswiki.net/deals) (2026.08 - 진행 중)
+* **데이터 검증 서비스** | [서비스](https://deals.nexuswiki.net/deals)
+* 항공권 가격을 수집해 노선별 평소 가격과 인접 날짜 가격을 대조하고, 실제로 저렴한 특가만 게시하는 서비스입니다. 콘텐츠는 AI 에이전트가 작성하고 사람이 검수합니다.
+* 할인율, 서로 다른 시각의 관측 2건, 신선도, 인접일 최저가를 모두 통과해야 특가로 인정하는 검증 게이트를 설계했고, 기준가보다 싸지 않은 건은 문안 생성을 건너뛰도록 했습니다.
+
+### [skillx-map](https://github.com/kanziman/skillx-map) (2026)
+* **CLI · 로컬 웹 UI** | [GitHub](https://github.com/kanziman/skillx-map) · [npm](https://www.npmjs.com/package/skillx-map)
+* Claude Code, Codex, Gemini에 쌓이는 AI 스킬과 플러그인을 한곳에서 스캔·점검·정리하는 도구입니다. 모든 삭제는 복구 가능한 휴지통으로 가고, 외부로 데이터를 보내지 않습니다.
+* 제로 의존성 코어와 플랫폼별 어댑터 구조로 설계했고, npm 출시 후 누적 500+ 다운로드를 기록했습니다.
 
 ### [NSQ (No Stupid Questions)](https://github.com/kanziman/nsq) (2026)
-* **Web Application** | [GitHub](https://github.com/kanziman/nsq) · [Live Web](https://nsq-teal.vercel.app/)
-* 팟캐스트 기반 고품질 영어/일본어 쉐도잉 서비스입니다. 2만 라인 중 1만 라인을 테스트 코드로 구축한 철저한 TDD 워크플로우를 통해 프로덕트의 안정성과 완성도를 확보했습니다.
-* **Spec**: A-B Repeat Waveform UI, Interactive Chat, Serif (Outfit / Serif Family) + Pretendard
-
-### [Momento Brand Identity](https://github.com/kanziman/brand-design) (2026)
-* **Design System** | [GitHub](https://github.com/kanziman/brand-design) · [Live App](https://brand-design-one.vercel.app/momento/) · [Landing](https://brand-design-one.vercel.app/)
-* 가이드라인부터 프로덕트 UI, 랜딩페이지, 피칭덱에 이르는 모든 시각 자산의 CSS 변수를 하나의 구조적인 토큰 시스템으로 바인딩하여 브랜드의 통일된 디자인 시스템을 구축했습니다.
-* **Spec**: CSS Custom Properties design source, WCAG AA Accessibility Contrast (No-pressure theme)
+* **웹 앱** | [GitHub](https://github.com/kanziman/nsq) · [Live Web](https://nsq-teal.vercel.app/)
+* Freakonomics 팟캐스트의 공식 대본과 유튜브 자막의 시간축을 맞춰, 화자가 분리된 영어·일본어 쉐도잉 학습을 제공하는 웹 앱입니다.
+* 자동 자막과 공식 대본을 Patience-Diff와 LIS로 정합하고 일치율 85% 미만은 임포트를 막았으며, 소스보다 테스트 코드가 많은 TDD로 개발했습니다.
 
 ---
 
-## About & Philosophy
+## About
 
-- **복잡도 제어**: 코드는 AI를 통해 그 어느 때보다 빠르게 생성할 수 있지만, 관리해야 하는 지식과 도구의 복잡도는 기하급수적으로 늘어납니다. AI 에이전트들을 적극적으로 활용하면서 난잡하게 불어나는 스킬들을 정돈할 관리 도구(`skillx-map`)와 정보의 정수만을 아카이빙할 수 있는 파이프라인(`zettlink`)을 구축한 이유입니다.
-- **테스트 기반 신뢰성**: 프로덕트 완결성을 위해 엄격한 TDD 워크플로우와 체계적인 PRD/이슈 관리를 최우선으로 여깁니다.
-- **디자인과 개발의 융합**: 디자인의 한계가 프로덕트 완결성을 막지 않도록, 단 하나의 구조적인 디자인 시스템(`brand-design`)을 직접 설계하고 조율하며 프로덕트의 일관성을 확보합니다.
-- **AI 기술의 실무 적용**: 시스템 아키텍처의 안정성, 파이프라인의 자동화, 디자인 토큰의 일관성을 지키는 것뿐 아니라, AI 기술을 다양한 업무(JIRA, Confluence, Excel 등)에 실질적으로 적용하기 위해 탐구하고 있습니다.
+- **AI가 만든 결과는 검증을 거쳐야 믿을 수 있다**: 위키는 출처를 두 번 인용하고, 특가 서비스는 가짜 할인을 걸러 내고, 에이전트는 사람 승인을 거쳐야 티켓을 냅니다. 프로젝트는 달라도 같은 생각에서 나왔습니다.
+- **만드는 데서 끝내지 않기**: 회사에서는 새 기능을 붙이는 일만큼 서비스를 안정적으로 굴리는 일도 맡고 있고, 운영에서 반복되는 점검과 검증은 AI로 넘기되 판단이 필요한 지점은 사람이 승인하도록 남겼습니다.
 
 ---
 
