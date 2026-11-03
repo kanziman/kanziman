@@ -20,27 +20,24 @@ EV 충전 데이터의 월별 변경 검증을 AI 에이전트로 자동화해 *
 ## 대표 프로젝트
 
 ### [NexusWiki](https://github.com/kanziman/NexusWiki)
-**원문·위키 이중 인용과 AI 통제를 구현한 지식 워크스페이스 · 개인 프로젝트**
+**원문·위키 이중 인용 검색에 답변 검증·비용 정산·변경 승인을 구현한 개인 프로젝트**
 
-- 원문을 연결된 위키로 정리하고, 4채널 하이브리드 검색으로 원문·위키 양쪽 출처를 함께 제공합니다.
-- Langfuse에는 고객 질문·답변 원문 없이 호출 메타데이터만 전송합니다. 토큰 예산, 답변 검증·수리, 중요 문서 변경 승인으로 AI 동작을 통제합니다.
-- OpenSpec 명세와 기능 단위 인수 조건으로 에이전트 작업 범위를 정하고, 병합 전 검증을 수행합니다.
+- 4채널 하이브리드 검색과 RRF로 원문·위키를 함께 검색하고, 답변의 인용을 검증해 한 번 수리한 뒤에도 위반이 남으면 근거 목록으로 대체합니다.
+- 중단된 호출의 비용 예약·후속 정산과 중요 문서 변경 승인을 구현했습니다. Langfuse에는 고객 본문 없이 호출 메타데이터만 전송합니다.
 
 [GitHub](https://github.com/kanziman/NexusWiki) · [서비스](https://www.nexuswiki.net/)
 
 ### [channel-voc-demo](https://github.com/kanziman/channel-voc-demo)
-**고객 상담 분석을 사람 승인 후 후속 업무로 연결하는 에이전트**
+**GraphRAG로 고객 상담 문제를 분석하고, 사람 승인 후 GitHub 이슈·Jira 티켓으로 연결하는 에이전트 데모**
 
-- 고객 상담에서 반복되는 문제의 원인과 예상 매출 손실액을 분석하고, 사람이 승인하면 GitHub 이슈·Jira 티켓으로 연결합니다.
-- 의미·키워드·그래프 검색을 결합한 GraphRAG와 LangGraph 승인 흐름을 구현했습니다. 공개 CS 데이터셋 1,200건 기반입니다.
+- 의미·키워드·그래프 검색을 결합하고, LangGraph로 분석 결과 검토와 승인 흐름을 구현했습니다. 공개 CS 데이터셋 1,200건 기반입니다.
 
 [GitHub](https://github.com/kanziman/channel-voc-demo) · [데모](https://channel-voc-demo.vercel.app/)
 
 ### [skillx-map](https://github.com/kanziman/skillx-map)
-**AI 스킬·플러그인을 한곳에서 점검하고 정리하는 개발 도구**
+**여러 AI 개발 도구의 스킬·플러그인을 통합 점검하고, 복구 가능한 삭제를 제공하는 CLI·로컬 웹 UI**
 
-- Claude Code, Codex, Gemini의 스킬과 플러그인을 통합 관리하는 CLI·로컬 웹 UI입니다.
-- 삭제는 복구 가능한 휴지통으로 보내고, 데이터를 외부로 전송하지 않습니다. 제로 의존성 코어와 플랫폼별 어댑터로 구성했습니다.
+- Claude Code, Codex, Gemini를 지원하며 데이터를 외부로 전송하지 않습니다. 제로 의존성 코어와 플랫폼별 어댑터로 구성했습니다.
 
 [GitHub](https://github.com/kanziman/skillx-map) · [npm](https://www.npmjs.com/package/skillx-map)
 
